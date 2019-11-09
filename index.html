@@ -40,7 +40,7 @@
     <!--Main Stylesheet-->
     <link rel="stylesheet" type="text/css" media="screen" href="css/app.css" />
     <!-- start of web manifest -->
-    <link rel="manifest" href="/manifest.json">
+    <link rel="manifest" href="manifest.json">
     <!--logo-->
     <link rel="shortcut icon" href="img/icons/icon-96x96.png">
     <link rel="apple-touch-icon" href="img/logo.png">
@@ -124,7 +124,7 @@
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', function () {
-                navigator.serviceWorker.register('/service-worker.js')
+                navigator.serviceWorker.register('service-worker.js')
                     .then(function () {
                         console.log("Service Worker Registered, Cheers to PWA Fire!");
                     });
