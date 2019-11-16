@@ -36,6 +36,7 @@
     </script>
     <!--Bootstrap CDN-->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--Main Stylesheet-->
     <link rel="stylesheet" type="text/css" media="screen" href="css/app.css" />
     <!-- start of web manifest -->
@@ -57,22 +58,23 @@
 
 </head>
 
-<body onload="getSettings()" onunload="saveSettings()">
+<body onload="getSettings()" >
     
 <div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-right" style="width:200px;right:0;" id="mySidebar">
-  <button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()">Close &times;</button>
-  <button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="saveSettings()">Save</button>
+  <button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()">Close&nbsp;&nbsp;&times;</button>
+  <button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="saveSettings();">Save&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-save"></i></button>
+  <button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="shareResults();">Share&nbsp;&nbsp;<i class="fa fa-share"></i></button>
   <a href="#general_settings" class="w3-bar-item w3-button">general settings</a>
   <a href="#task_settings" class="w3-bar-item w3-button">task settings</a>
   <a href="#results" class="w3-bar-item w3-button">results</a>
 </div>
 
 <div class="w3-main" style="margin-right:200px">
-<div class="w3-teal">
+<div class="w3-theme-d1">
   
   <div class="w3-container">
     <h1>Battery Life
-    <button class="w3-button w3-teal w3-xlarge w3-right w3-hide-large" onclick="w3_open()">&#9776;</button>
+    <button class="w3-button w3-theme-d1 w3-xlarge w3-right w3-hide-large" onclick="w3_open()">&#9776;</button>
     </h1>
   </div>
 </div>
@@ -85,9 +87,9 @@
   <div class="w3-half">
     <div class="w3-card">
         <table class="w3-table w3-bordered w3-striped">
-            <tr class="w3-teal" style="height:60px">
+            <tr class="w3-theme" style="height:60px">
               <td colspan="2">
-                <select class="w3-select w3-teal" name="option">
+                <select class="w3-select w3-theme" name="option">
                   <option value="" disabled selected>Choose your option</option>
                   <option value="1">Option 1</option>
                   <option value="2">Option 2</option>
@@ -115,7 +117,7 @@
   <div class="w3-half">
     <div class="w3-card">
         <table class="w3-table w3-bordered w3-striped">
-            <tr class="w3-teal" style="height:60px">
+            <tr class="w3-theme" style="height:60px">
               <th>task</th>
               <th>wakeup current</th>
               <th>wakeup time</th>
@@ -147,9 +149,9 @@
 <a name="results"></a>
 <div class="w3-card">
     <div class="w3-container"> 
-    
+   		 <br />
         <div class="w3-bar">
-          <button type="button" class="w3-bar-item w3-button w3-teal w3-round-xlarge" style="width:50%"  onclick="compute(this.form)">Calculate</button>
+          <button type="button" class="w3-bar-item w3-button w3-theme w3-round-xlarge" style="width:50%"  onclick="compute(this.form)">Calculate</button>
           <button type="reset" class="w3-bar-item w3-button w3-red w3-round-xlarge" style="width:50%">Clear</button>
         </div>
         <br />
@@ -164,7 +166,7 @@
 </div>
 </form>
 
-<footer class="w3-container w3-teal">
+<footer class="w3-container w3-theme-d1">
     <h5>Source code: </h5>
     <p><a href="https://github.com/variablo87/batterycalc" target="_blank">Github</a></p>
 </footer>

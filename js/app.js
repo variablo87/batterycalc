@@ -85,4 +85,53 @@ function compute(form) {
     window.location.href = "#results";
 }
 
+//share the results
+function shareResults(){
+	console.log("share results");
+	var resultJSON = document.getElementById("form1").elements;
+	
+	var mailbody = "\n";
+	mailbody = mailbody + "capacity: "+resultJSON.n_battery.value+" x "+resultJSON.capacity.value+" mAh\n";
+	mailbody = mailbody + "sleep current: "+resultJSON.sleep_c.value+" mA\n\n";
+	
+	mailbody = mailbody + "task 1:\n";
+	mailbody = mailbody + "--------------------------\n";
+	mailbody = mailbody + "wakeup current: "+resultJSON.wake_c_1.value+" mA\n";
+	mailbody = mailbody + "wakeup time: "+resultJSON.wake_t_1.value+" ms\n";
+	mailbody = mailbody + "wakeups per hour: "+resultJSON.wake_n_1.value+"\n\n";
+	
+	mailbody = mailbody + "task 2:\n";
+	mailbody = mailbody + "--------------------------\n";
+	mailbody = mailbody + "wakeup current: "+resultJSON.wake_c_2.value+" mA\n";
+	mailbody = mailbody + "wakeup time: "+resultJSON.wake_t_2.value+" ms\n";
+	mailbody = mailbody + "wakeups per hour: "+resultJSON.wake_n_2.value+"\n\n";
+	
+	mailbody = mailbody + "task 3:\n";
+	mailbody = mailbody + "--------------------------\n";
+	mailbody = mailbody + "wakeup current: "+resultJSON.wake_c_3.value+" mA\n";
+	mailbody = mailbody + "wakeup time: "+resultJSON.wake_t_3.value+" ms\n";
+	mailbody = mailbody + "wakeups per hour: "+resultJSON.wake_n_3.value+"\n\n";
+
+	mailbody = mailbody + "\ndays: "+resultJSON.result1.value+"\n";
+	mailbody = mailbody + "years: "+resultJSON.result2.value+"\n";
+
+	//alert(mailbody);
+	//window.location="mailto:?subject=battery%20life&body="+encodeURIComponent(mailbody);
+	
+	let shareData = {
+			title: 'Battery Life Results',
+			url: 'https://variablo87.github.io/batterycalc/',
+			text: mailbody,
+			}
+	
+	if (navigator.share) {
+		navigator.share(shareData)	
+	} else {
+		// fallback
+		window.location="mailto:?subject=battery%20life&body="+encodeURIComponent(mailbody);
+	}
+	
+	
+
+}
          // end script -->

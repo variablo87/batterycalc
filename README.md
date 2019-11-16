@@ -1,4 +1,4 @@
-# batterycalc
+# batterycalc ![logo](/home/norbert_hesse/git/batterycalc/img/icons/icon-72x72.png)
 Battery Life Calculator
 
 https://variablo87.github.io/batterycalc/
