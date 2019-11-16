@@ -1,6 +1,6 @@
 {
   "name": "Battery Life Calculator",
-  "short_name": "battercalc",
+  "short_name": "Battery Life",
   "theme_color": "#2196f3",
   "background_color": "#2196f3",
   "display": "standalone",
